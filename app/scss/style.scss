@@ -1,0 +1,79 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+.body {
+    background-image: url(../images/main-bg.jpg);
+    background-size: 1440px auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.header {
+    &__inner {
+        padding: 32px 0;
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        color: $light-blue;
+        font-weight: 700;
+        padding: 12px 24px;
+        border: 1px solid $light-blue;
+        border-radius: 6px;
+        margin-right: 62px;
+    }
+    &__phone {
+        display: flex;
+        margin-right: auto;
+    }
+    &__phone-item + .header__phone-item {
+        margin-left: 10px;
+    }
+    &__phone-link {
+        font-weight: 600;
+        color: $dark-blue;
+    }
+    &__lang {
+        display: flex;
+        font-size: 14px;
+    }
+    &__lang-item {
+        margin-left: 15px;
+    }
+    &__lang-link {
+        display: inline-block;
+        color: #A3BEF5;
+        width: 32px;
+        text-align: center;
+        padding-top: 25px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 32px;
+            height: 16px;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &.ua::before {
+            background-image: url(../images/ua-flag.png);
+        }
+        &.pl::before {
+            background-image: url(../images/pl-flag.png);
+        }
+    }
+    &__lang-link--active {
+        color: #357BD3;
+    }
+}
+
+
+
+
+
+@import 'media';
