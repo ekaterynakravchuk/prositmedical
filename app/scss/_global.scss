@@ -37,3 +37,13 @@ body {
     border: 1px solid;
     border-radius: 6px;
 }
+
+.button {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    color: $white;
+    background-color: $light-blue;
+    padding: 20px 48px;
+    border-radius: 6px;
+}
