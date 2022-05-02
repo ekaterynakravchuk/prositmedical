@@ -210,7 +210,6 @@
     }
 }
 
-
 .footer {
     background-color: $dark-blue;
     &__inner {
@@ -233,6 +232,86 @@
         background-color: $white;
         padding: 12px 24px;
         border-radius: 6px
+    }
+}
+
+.popup {
+    &__order,
+    &__feedback {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s; 
+    }
+    &__order.order__open,
+    &__feedback.open__feedback {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__body {
+        min-height: 100%;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__card {
+        position: relative;
+        background-image: url(../images/popup-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        max-width: 646px;
+        width: 100%;
+        height: 254px;
+        padding: 48px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    &__close {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+    }
+    &__title {
+        color: rgba(#3B5B9C, .7);
+        margin-bottom: 20px;
+    }
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__input {
+        max-width: 256px;
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 12px 19px;
+        border: 1px solid #BCBEC2;
+        border-radius: 4px;
+        font-size: 14px;
+        &::placeholder {
+            font-size: 14px;
+            color: rgba(#3B5B9C, .5);
+        }
+    }
+    &__btn {
+        border: none;
+        font-size: 18px;
+        padding: 12px 40px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    &__text {
+        font-size: 20px;
+        color: $dark-blue;
+        width: 410px;
+    }
+    &__feedback .popup__card {
+        background-image: url(../images/popup-bg2.png);
     }
 }
 
