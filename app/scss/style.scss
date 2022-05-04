@@ -157,6 +157,10 @@
         background-color: $light-blue;
         border-radius: 6px;
         margin-left: 24px;
+        transition: all .3s;
+        &:hover {
+            background-color: $dark-blue;
+        }
     }
     &__functions-box {
         margin-bottom: 32px;
@@ -230,8 +234,14 @@
         font-size: 20px;
         color: $dark-blue;
         background-color: $white;
-        padding: 12px 24px;
-        border-radius: 6px
+        padding: 12px 24px; 
+        border: 1px solid $white;
+        border-radius: 6px;
+        transition: all .3s;
+        &:hover {
+            color: $white;
+            background-color: $dark-blue;
+        }
     }
 }
 
@@ -304,6 +314,10 @@
         padding: 12px 40px;
         margin: 0 auto;
         cursor: pointer;
+        &:hover {
+            color: $white;
+            background-color: $dark-blue;
+        }
     }
     &__text {
         font-size: 20px;

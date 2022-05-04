@@ -1,7 +1,4 @@
 $(function() {
-    $('.header__lang-link').on('click', function() {
-        $('.header__lang-link').toggleClass('header__lang-link--active');
-    })
 
     $('.device__price-btn').on('click', function(event) {
         event.preventDefault();

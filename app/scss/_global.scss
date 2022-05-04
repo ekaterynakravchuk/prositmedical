@@ -45,5 +45,11 @@ body {
     color: $white;
     background-color: $light-blue;
     padding: 20px 48px;
+    border: 1px solid $light-blue;
     border-radius: 6px;
+    transition: all .3s;
+    &:hover {
+        color: $light-blue;
+        background-color: transparent;
+    }
 }
